@@ -159,7 +159,7 @@ def compute_flux(input_quantities, output_unit, wavelength=None, spatial_scale=N
         q = jansky_per_beam * beams_per_pixel
 
         # Find total flux in Jy
-        total_flux = quantity_sum(q)
+        total_flux = quantity_sum(input_quantities)
 
     else:
 
