@@ -77,8 +77,8 @@ def compute_flux(input_quantities, output_unit, wavelength=None, spatial_scale=N
         # Find the area of a pixel as a solid angle
         pixel_area = (spatial_scale ** 2)
 
-        # Convert input quantity to Fnu in Jy
-        q = (input_quantities * pixel_area).to(u.Jy)
+        # Convert input quantity to Fnu in Jy; removed line converting to jy
+        q = input_quantities
 
         # Find total flux in Jy
         total_flux = quantity_sum(q)
